@@ -1,0 +1,24 @@
+/* GENERAL */
+*{margin: 0; padding: 0;}
+body{font: normal 100%/1.5 sans-serif;}
+main {display: block;}
+
+/* WRAPPER */
+#wrapper{margin: 0 auto;width: 1024px; border: 1px solid #000; position: relative;}
+
+/*HEADER*/
+header {height: 200px; background: url(../images/spring-header.jpg) no-repeat top left; padding: 10px 0 0 20px; text-align: left;}
+header h1{color: #FFF; font-size: 3em;}
+
+/* NAVIGATON */
+nav {background: #ddd; height: 40px}
+nav ul li{display: inline; margin-left: 20px; line-height: 40px}
+nav ul li a {text-decoration: none; color: #000; font-size: 1.2em}
+nav ul li a:hover{text-decoration: underline;}
+
+/* MAIN */ 
+main {padding: 10px;}
+main p{margin: 0 0 10px 20px;}
+
+/* FOOTER */
+footer{position: absolute; width: 1024px; left: 50%; margin-left: -513px; text-align: center}

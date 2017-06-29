@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <contact id="1299595105">
+    <firstName>Scott</firstName>
+    <lastName>Shaper</lastName>
+    <phone>999-999-9999</phone>
+    <email><![CDATA[sshaper@test.com]]></email>
+    <additionalInfo><![CDATA[This is a test.]]></additionalInfo>
+  </contact>
+</root>
