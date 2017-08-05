@@ -1,14 +1,13 @@
 <?php
-
+/*THIS GETS THE DATA IN THIS CASE JUST THE FILE NAME*/
 $data = $_POST['filename'];
 
+/*THIS IS THE ACTUAL FILE THAT WAS SENT.*/
 $file = $_FILES['file'];
+
 echo "<p>The follow are associative arrays of the appended items.</p>";
-echo "<p>Filename</p>";
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-//var_dump($_FILES);
+echo "<p>Filename is ".$data. "</p>";
+
 
 echo "<p>File</p>";
 echo '<pre>';
