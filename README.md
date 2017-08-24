@@ -13,7 +13,7 @@ The are as follows:
 * php-template-site - Example of a template site using php
 * php-upload-file - Example of how to upload files with PHP using AJAX and formdata object from JavaScript
 * php-validation - Example of using PHP and AJAX to validate a form on the backend yet have the user not see the page reload.
-* php_pdo - Example of using pdo for doing mysql commands
+* php_pdo - Example of using pdo for doing mysql commands.  Also demonstrates a basic MVC type structure using a modular site.  This is what the solution was prototyped after. Important example to study.
 * php_sessions - Example of using sesssions with PHP
 * php_web - Example of parsing XML via PHP
 

@@ -1,2 +1,0 @@
-video: https://www.youtube.com/watch?v=bjT5PJn0Mu8
-website https://devdojo.com/episode/create-a-php-login-script
