@@ -7,6 +7,7 @@ The are as follows:
 * database_data - Datasources for the database lessons
 * datasources - Datasources such as xml and json used for test files
 * php-cars-classes - Example of using PHP classes
+* php-directories - Examples of how to add and remove directories
 * php-forms - Example of using post and get in your PHP forms
 * php-modular-site - Example of a modular site using PHP
 * php-read-write-files - Example of reading and writing to a file in php
