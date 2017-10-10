@@ -9,13 +9,20 @@ if(isset($_POST['create'])){
   chmod('parent/child/sub-child', 0777);
 
   /*I WILL ALSO ADD SOME FILES*/
+  $file = fopen("parent/child/child-file1.txt","w") or die("Cannot Open File");
+  $content = "This is child file 1";
+  fwrite($file,$content);
+  fclose($file);
+
+
+  /*I WILL ALSO ADD SOME FILES*/
   $file = fopen("parent/child/sub-child/file1.txt","w") or die("Cannot Open File");
-  $content = "This is file 1";
+  $content = "This is sub-child file 1";
   fwrite($file,$content);
   fclose($file);
 
   $file = fopen("parent/child/sub-child/file2.txt","w") or die("Cannot Open File");
-  $content = "This is file 2";
+  $content = "This is sub-child file 2";
   fwrite($file,$content);
   fclose($file);
 
@@ -29,28 +36,43 @@ if(isset($_POST['create'])){
 }
 if(isset($_POST['remove'])){
    
+   $count = 0;
   /* PHP DELETED FUNCTION (CUSTOM) DEALS WITH DIRECTORIES RECRUSIVELY */
   function delete_files($target) {
-      /* IS_DIR() CHECKS TO SEE IF THE TARGET IS A DIRECTORY, IF SO IT DELETES ALL THE DIRECTORIES AND FILES OF THE DIRECTORY*/
+      /* IS_DIR() CHECKS TO SEE IF THE TARGET IS A DIRECTORY,*/
       if(is_dir($target)){
+          /*GLOB RETURNS AN ARRAY CONTAINING THE MATCHED FILES/DIRECTORIES, AN EMPTY ARRAY IF NO FILE MATCHED OR FALSE ON ERROR.  IN THIS CASE GLOB RETURNS AND ARRAY OF ANY SUBFOLDERS OR FILES*/
           $files = glob( $target . '*', GLOB_MARK ); //GLOB_MARK ADDS A SLASH TO EACH DIRECTORY 
-          foreach( $files as $file )
-          {
+          echo "<pre>";
+          print_r($files);
+          echo "</pre>";
+          
+          /*THE FOREACH LOOPS THROUGH THE ARRAY RETURNED BY GLOB AND IF THEIR ARE ANY FILES IN THAT ARRAY IT WILL DELETE THEM BY CALLING DELETE FILE AGAIN.  IF THE ARRAY ONLY CONTAINS A DIRECTORY  IT WILL GET THE NEXT CHILD DIRECTORY */
+          foreach( $files as $file ){
+            echo "file per iteration is - ".$file."<br>";
             
-            delete_files($file);      
+            /* IF THIS IS A FILE THEN REMOVE IT OTHERWISE CHECK FOR ANOTHER SUB DIRECTORY AND ADD IT BECOMES TARGET*/
+            delete_files($file);
           }
+
+
           /*I NEEDED TO DO A FINAL CHECK TO MAKE SURE THE TARGET WAS A DIRECTORY, BEFORE I WAS GETTING A WARNING THAT THE FILE DID NOT EXIST BECAUSE IT HAD CALLED DELETE_FILES PREVIOUSLY*/
           if(is_dir($target)){
+            echo "Directory deleted is - ".$target."<br>";
             rmdir($target);
           }
           
-      /*IS FILE CHECKES TO SEE IF THE TARGET IS A FILE AND IF SO REMOVES IT.*/    
-      } elseif(is_file($target)) {
-          unlink( $target );  
+      /*IS_FILE CHECKES TO SEE IF THE TARGET IS A FILE AND IF SO REMOVES IT.*/    
+      } 
+
+      elseif(is_file($target)) {
+          echo "File deleted is - ".$target."<br>";
+          unlink($target);  
       }
   }
-  
   delete_files('parent');
+
+
   
 
   /*FILE_EXISTS CHECKS TO SEE IF THE DIRECTORY OR FILE EXISTS*/
@@ -61,6 +83,8 @@ if(isset($_POST['remove'])){
     $msg = "There was a problem";
   }
 }
+
+
 ?>
 
 <!DOCTYPE html>
