@@ -17,4 +17,5 @@ The are as follows:
 * php_pdo - Example of using pdo for doing mysql commands.  Also demonstrates a basic MVC type structure using a modular site.  This is what the solution was prototyped after. Important example to study.
 * php_sessions - Example of using sesssions with PHP
 * php_web - Example of parsing XML via PHP
+* wordPress-examples - 15 Theme examples which demonstrate different things you can do with themes.  Must have wordpress installed to view the themes.
 
