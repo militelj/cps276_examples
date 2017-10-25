@@ -1,0 +1,227 @@
+/*
+Theme Name: wpthemesv13;
+Author: Scott Shaper
+Version: 13.0
+Description: In this lesson we learn how to combine similar code parts to reduce repetition;
+*/
+
+
+/* general */
+body{
+	font-family: sans-serif;
+	color: #333;
+}
+
+a:link, a:visited {
+	color: #006ec3;
+}
+
+p{
+	line-height: 1.65em;
+}
+
+.clearfix {
+	overflow: auto;
+}
+
+/* wrapper */
+#wrapper {
+	width: 65%;
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 0 20px 0 20px;
+}
+
+/* grouped*/
+header, footer {
+	border-bottom: 2px solid #999;
+}
+
+
+/* header */
+header h1 {
+	line-height: 1.25;
+}
+
+/* navigation menus*/
+.site-nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+
+.site-nav ul li {
+	float: left;
+}
+
+/* header nav */
+header nav li{
+	margin-right: 10px;
+}
+
+header nav li a:link, header .site-nav li a:visited {
+	display: block;
+	width: 100px;
+	height: 50px;
+	border: 1px solid #BBB;
+	border-bottom: none;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+
+}
+
+/* WORDPRESS ADDS A CLASS OF CURRENT-MENU-ITEM TO THE LI OF EACH LINK SO YOU CAN EASILY ADD STYLING TO MAKE THE SELECTED PAGE NAVIGATION LOOK DIFFERENT THEN THE REST OF THE NAV*/
+header nav li.current-menu-item a:link, header .site-nav li.current-menu-item a:visited, header .site-nav li.current-page-ancestor a:visited, header .site-nav li.current-page-ancestor a:link {
+	background: #006EC3;
+	color: #FFF;
+}
+
+header nav li a:hover{
+	background: #ECECEC;
+}
+
+header h1 span {
+	font-size: .6em;
+	display: block;
+	font-weight: normal;
+}
+
+/* article*/
+article.post {
+	border-bottom: 2px dotted #bbb;
+}
+
+article.post:last-of-type{
+	border-bottom: none;
+}
+
+/* footer*/
+footer {
+	margin-top: 30px;
+}
+
+footer nav ul li{
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px dotted #BBB;
+}
+
+/* page layout*/
+h2.page {
+	font-size: 300%;
+}
+
+
+/*two column layout*/
+.column-container {
+	overflow: auto;
+}
+
+.title-column {
+	float: left;
+	width: 30%;
+}
+
+.content-column {
+	float: right;
+	width: 70%;
+}
+
+/* info box styles */
+div.info-box {
+	float: right;
+	margin: 0 0 30px 30px;
+	padding: 20px;
+	background: #eee;
+	width: 30%;
+}
+
+div.info-box h3 {
+	margin-bottom: 6px;
+}
+
+div.info-box p {
+	font-size: 85%;
+}
+
+/*children links*/
+
+.children-links {
+	margin: 20px 0 20px 0;
+	font-size: 80%;
+}
+
+.children-links a:link, .children-links a:visited {
+	text-decoration: none;
+}
+
+.children-links ul{
+	float: left;
+}
+
+.children-links li {
+	margin-right: 20px;
+}
+
+.children-links .parent-link {
+	float: left;
+	margin-right: 20px;
+	padding-right: 20px;
+	border-right: 1px solid #DDD;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.children-links .parent-link a:link, .children-links .parent-link a:visited {
+	color: #333;
+}
+
+.children-links .current_page_item a:link, .children-links .current_page_item a:visited{
+	border-bottom: 1px solid #DDD;
+	color: #333;
+	cursor: default;
+}
+
+/* POST STYLES */
+.post h2 {
+	margin-bottom: 0;
+}
+
+p.post-info{
+	font-size: 87%;
+	color: #999;
+}
+
+p.post-info a, p.post-info a:link, p.post-info a:hover{
+	color: #999;
+}
+
+/* SEARCH */
+.header-search {
+	float: right;
+}
+
+.header-search label {
+	position: absolute;;
+	left: -9999px;
+}
+
+.header-search #searchsubmit, .header-search #search {
+	vertical-align: top;
+	padding: 3px 0;
+}
+
+.header-search #searchsubmit {
+	background: #006ec3;
+	color: #fff;
+	padding: 5px 14px;
+	border: none;
+}
+
+.header-search #s {
+	padding: 3px 0;
+}

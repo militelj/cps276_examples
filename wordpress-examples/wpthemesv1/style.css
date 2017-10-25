@@ -1,0 +1,62 @@
+/*
+Theme Name: wpthemesv1;
+Author: Scott Shaper
+Version: 1.0
+Description: Setting up a basic theme apge.;
+*/
+
+
+/* general */
+body{
+	font-family: sans-serif;
+	color: #333;
+}
+
+a:link, a:visited {
+	color: #006ec3;
+}
+
+p{
+	line-height: 1.65em;
+}
+
+/* wrapper */
+#wrapper {
+	width: 65%;
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 0 20px 0 20px;
+}
+
+/* grouped*/
+header, footer {
+	border-bottom: 2px solid #999;
+}
+
+
+/* header */
+header h1 {
+	line-height: 1.25;
+}
+
+header h1 span {
+	font-size: .6em;
+	display: block;
+	font-weight: normal;
+}
+
+/* article*/
+
+article.post {
+	border-bottom: 2px dotted #bbb;
+}
+
+article.post:last-of-type{
+	border-bottom: none;
+}
+
+/* footer*/
+
+footer {
+	margin-top: 30px;
+}
