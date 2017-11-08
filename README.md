@@ -8,6 +8,7 @@ The are as follows:
 * datasources - Datasources such as xml and json used for test files
 * php-cars-classes - Example of using PHP classes
 * php-directories - Examples of how to add and remove directories
+* php-encrypted-login - Example of how to create a login that checks and inserts an encrypted password.
 * php-forms - Example of using post and get in your PHP forms
 * php-modular-site - Example of a modular site using PHP
 * php-read-write-files - Example of reading and writing to a file in php
