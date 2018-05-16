@@ -1,5 +1,5 @@
 # cps276_examples
-These are the examples from my cp276 class on PHP.  The actual course notes explain what the examples do in more detail.  To access the course you must be enrolled in the CPS276 class at Washtenaw Community College.
+These are the examples from my cps276 class on PHP.  The actual course notes explain what the examples do in more detail.  To access the course you must be enrolled in the CPS276 class at Washtenaw Community College.
 
 The are as follows:
 
