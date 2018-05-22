@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>AJAX Post Example (PHP)</title>
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
-    <div id="wrapper">
+    <div class="container">
       <h1>Post Example</h1>
-      <input type="text" id="sendInfo" name="sendInfo">
-      <input type="button" id="getInfo" value="Send and Get Info">
+      <label for='someText'>Enter some text</label>
+      <input type="text" class="form-control" id="someText" >
+      <input type="button" class="btn btn-primary" style="margin: 15px 0;" id="getInfo" value="Send and Get Info">
       <div id="result"></div>
     </div>
     <script>
@@ -29,7 +30,7 @@
             document.getElementById("result").innerHTML = this.responseText;
           }
         };
-        data = document.getElementById('sendInfo').value;
+        data = document.getElementById('someText').value;
         
         /* THIS IS A POST REQUEST IT WILL SEND AND GET INFORMATION TO/FROM SERVER */
         xhr.open("POST", "php/post_example.php", true);
