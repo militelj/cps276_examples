@@ -26,11 +26,12 @@ $page = new Page();
     <div id="wrapper" class="container">
       <header>
         <h1>Home Page</h1>
+        <?php echo $page->nav(); ?>
       </header>
-      <?php echo $page->nav(); ?>
+      
       <main>
         <div class="row">
-          <div class="col-md-3" id="result"></div>
+          <div class="col-md-3" id="result">&nbsp;</div>
         </div>
         <div class="row">
           <div class="col-md-3">

@@ -27,10 +27,10 @@ $page = new Page();
     <div id="wrapper" class="container">
       <header>
         <h1>Home Page</h1>
+        <?php echo $page->nav(); ?>
       </header>
-      <?php echo $page->nav(); ?>
       <main>
-        <div id="result"></div>
+        <div id="result">&nbsp;</div>
         <div id="updateDeleteList"><?php echo getNames('input'); ?></div>
       </main>
 
