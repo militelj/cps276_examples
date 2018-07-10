@@ -74,8 +74,7 @@ crud.sendRequest = function(data, specificAction){
 	xhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
 			response = JSON.parse(this.responseText);
-			console.log(response);
-
+			
 			/* IF THERE WAS AN ERROR THEN DISPLAY THE ERROR MESSAGE */
 			if(response.masterstatus === 'error'){
 				document.getElementById('result').innerHTML = response.msg;
