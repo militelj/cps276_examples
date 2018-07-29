@@ -1,53 +1,50 @@
 <?php
 class Car{
-	/*SETS THE PROPERTIES TO PRIVATE AND THE DATATYPE TO STRING*/
-    private $make;
-    private $model;
-    private $color;
+	/* CREATE SOME PRIVATE PROPERTIES.  I SET THE DATATYPES AND VALUES LATER BUT I COULD DO IT HERE AS WELL */
+    private $wheels;
     private $engine;
+    private $seat;
+    private $radio;
 
     
     public function __construct(){
-    	 /*ASSIGNS VALUES TO THE PROPERTIES. CONSTRUCTOR FUNCTIONS ARE USED TO SET THINGS UP.*/
-        $this->make = "Honda";
-        $this->model = "CRV";
-        $this->color = "Dark Blue";
-        $this->engine = "4 cylinder";
+    	
+         /* ASSIGNS VALUES TO THE PROPERTIES. CONSTRUCTOR FUNCTIONS ARE USED TO SET THINGS UP.*/
+        $this->wheels = "Aluminum";
+        $this->engine = "8 cylinder";
+        $this->seat = "4 Cloth Black";
+        $this->radio = "AM/FM";
     }
      
-    public function setColor($color){
-    	$this->color=$color;
-    }  
-    
-    public function setModel($model){
-    	$this->model=$color;
-    }  
-    
-    public function setMake($make){
-    	$this->make=$make;
+    public function setWheels($wheels){
+    	$this->wheels=$wheels;
     }  
     
     public function setEngine($engine){
     	$this->engine=$engine;
+    }  
+    
+    public function setSeat($seat){
+    	$this->seat=$seat;
+    }  
+    
+    public function setRadio($radio){
+    	$this->radio=$radio;
     }   
 	
-	public function getColor(){
-		return $this->color;
-	}
-	
-	public function getModel(){
-		return $this->model;
-	}
-	
-	public function getMake(){
-		return $this->make;
+	public function getWheels(){
+		return $this->wheels;
 	}
 	
 	public function getEngine(){
 		return $this->engine;
 	}
-
-	public function getDetails(){
-		return $this->color." ".$this->make." ".$this->model;
+	
+	public function getSeat(){
+		return $this->seat;
+	}
+	
+	public function getRadio(){
+		return $this->radio;
 	}
 }
