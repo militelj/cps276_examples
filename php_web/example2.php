@@ -1,5 +1,5 @@
 <?php
-require_once 'php/parse_xml.php';
+require_once('php/parse_xml.');
 ?>
 <!DOCTYPE html>
 <html lang="en">
