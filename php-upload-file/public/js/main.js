@@ -77,9 +77,5 @@ function saveInfo(){
   /* THIS IS A POST REQUEST IT WILL SEND AND GET INFORMATION TO/FROM SERVER */
   xhr.open("POST", "php/upload_save.php", true);
 
-  /*IMPORTANT!!!!! WHEN USING THE FORMDATA OBJECT DO NOT INCLUDE THE setRequestHeader method.  LIKE WHAT WAS DONE WITH POST */
-  //xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-  /*I USE THE DATA VARIABLE THAT I CREATED TO STORE THE ACTUAL DATA AND THEN SEND THE DATA USING THE DATA NAME I USE WITH THE SEND REQUEST.  A SEND REQUEST MUST HAVE A NAME THAT ATTACHES TO WHAT IS BEING SENT.*/
   xhr.send(formdata);
 }
