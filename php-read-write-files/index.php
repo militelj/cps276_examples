@@ -38,9 +38,11 @@ if (isset($_POST['write'])){
     	$file = fopen("files/names.txt","a") or die("Cannot Open File");
     	fwrite($file,$content);
     	fclose($file);
+
     	/*I CLEAR MY POST VALUES BECAUSE I USED THOSE BELOW IN THE HTML*/
     	$_POST['fname'] = "";
     	$_POST['lname'] = "";
+
     	/*CREATE MY ACKNOWLEDGEMENT*/
     	$acknowledgement = "Name has been added";
     	
@@ -64,6 +66,7 @@ if (isset($_POST['read'])){
 	$file = file("files/names.txt");
 	foreach($file as $v){
 		$tempArr = explode(",",$v);
+		
 		/*THE \N CREATES AN EXTRA SPACE AT THE END OF THE LAST NAME, THIS REMOVES IT.*/
 		$tempArr[1] = substr($tempArr[1],0,-1);
 		$str = "$tempArr[1], $tempArr[0]";

@@ -1,4 +1,4 @@
-<?php
+ <?php
 /* GETS THE FILE THAT CONTAINS THE JSON CODE */
 $str = file_get_contents('books.txt');
 

@@ -22,6 +22,7 @@
           /*CODE FOR OLDER BROWSERS*/
           xhr = new ActiveXObject("Microsoft.XMLHTTP");
         }
+
         xhr.onreadystatechange = function() {
           /*IF EVERYTING IS OKAY THEN DISPLAY THE RESULT */
           if (this.readyState == 4 && this.status == 200) {
@@ -51,6 +52,9 @@
 
           document.getElementById('result').innerHTML = list;
         };
+
+
+        
         /* THIS IS A GET REQUEST IT ONLY GETS INFORMATION IT CANNOT SEND IT */
         xhr.open("GET", "php/get_xml.php", true);
         xhr.send();
