@@ -1,5 +1,6 @@
 <?PHP
-require_once 'php/nameList.php';
+require_once 'php/nameListFunction.php';
+$output = getNames();
 ?>
 
 <!doctype html>

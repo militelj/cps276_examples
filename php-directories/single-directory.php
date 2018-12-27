@@ -1,15 +1,16 @@
 <?php
+
 $msg = "";
+
 //ISSET CHECKS TO SEE IF A VARIBLE EXISTS. RETURNS TRUE IF IT DOES AND FALSE IF IT DOES NOT. 
 if(isset($_POST['create'])){
   
-  $old = umask(0); 
-//mkdir($dir,0777); 
- 
-  $success = mkdir('mydirectory', 0777);
-
-  umask($old);
+   
+  $success = mkdir('mydirectory');
   
+/* I NEED TO USE THE CHMOD HERE TO SET THE PROPER PERMISSIONS.*/
+  chmod('mydirectory', 0777);
+ 
   if($success){
     $msg = "Directory Created";
   }

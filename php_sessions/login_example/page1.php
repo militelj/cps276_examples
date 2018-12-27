@@ -4,6 +4,7 @@ if($_SESSION['access'] !== "accessGranted"){
   header('Location: index.php');
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -43,6 +44,7 @@ if($_SESSION['access'] !== "accessGranted"){
     <main>
       <p>Hello <?php echo $_SESSION['fname']; ?></p>
       <p>This is page 1</p>
+
     </main>
     
   </div>

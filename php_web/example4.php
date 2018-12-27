@@ -1,5 +1,7 @@
 <?PHP
-require_once 'php/nameList.php';
+require_once 'php/nameListClass.php';
+$names = new NameList();
+$output = $names->getNames();
 ?>
 
 <!doctype html>

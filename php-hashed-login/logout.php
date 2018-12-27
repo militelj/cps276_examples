@@ -1,5 +1,6 @@
 <?php
 session_start();
 /* DELETE THE SESSION VALUES*/
-session_destroy();
+session_unset();
+
 header('Location: index.php');

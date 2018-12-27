@@ -2,7 +2,7 @@
 
 class Page {
 	public function nav(){
-		$nav = <<<HTML
+$nav = <<<HTML
       <nav>
         <ul>
           <li><a href="home.php">Home</a></li>
@@ -15,7 +15,8 @@ HTML;
   }
   
   public function head($title="title"){
-    $head = <<<HTML
+
+$head = <<<HTML
   <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -27,7 +28,7 @@ HTML;
 
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="../public/css/main.css" rel="stylesheet">
+        <link href="public/css/main.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +42,7 @@ HTML;
     return $head;
   }
 
-  function security(){
+  public function security(){
     session_start();
     if($_SESSION['access'] !== "accessGranted"){
       header('location: index.php');

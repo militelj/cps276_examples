@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
     /* HERE I STORE A FIRST NAME IN THE SESSION AS WELL AND WILL DISPLAY IT ON EVERY PAGE*/
     $_SESSION['fname'] = $_POST['fname'];
 
-    session_regenerate_id();
+    //session_regenerate_id();
     header('location:page1.php');
   }
   else {
