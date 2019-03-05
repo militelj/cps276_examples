@@ -50,7 +50,7 @@ HTML;
       <h1>Membership Form</h1>
       <p>Thanks for choosing to join The Widget Club. To register, please fill in your details below and click Send Details.</p>
       <p>The information that will be sent to the server will be displayed after the form.</p>
-      <form action="form_self_load.php" method="post">
+      <form action="form_send_data_to_itself.php" method="post">
       <div class="form-group">
         <label for="firstName">First name</label>
         <input type="text" class="form-control" name="firstName" id="firstName" value="John">

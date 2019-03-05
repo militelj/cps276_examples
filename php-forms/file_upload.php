@@ -80,6 +80,11 @@ HTML;
     <main class="container">
       <h1>Uploading a Photo</h1>
       <p>Please enter your name and choose a photo to upload, then click Send Photo.</p>
+		<p>Example photos to try:<br>
+			<a href="example_photos/mac_desktop.png">Photo that is too big</a><br>
+			<a href="example_photos/mac-screenshot.png">Photo that should work.</a>
+		</p>
+
       <form action="file_upload.php" method="post" enctype="multipart/form-data">
       	<div class="form-group">
       		<label for="visitorName">Your name</label>
